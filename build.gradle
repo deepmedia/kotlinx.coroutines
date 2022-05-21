@@ -127,6 +127,15 @@ allprojects {
         google()
         mavenCentral()
         maven { url "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev" }
+
+        maven {
+            name = "github"
+            url "https://maven.pkg.github.com/deepmedia/deepmedia-kotlinx"
+            credentials {
+                username = project.findProperty("github.user")
+                password = project.findProperty("github.pat")
+            }
+        }
     }
 }
 
