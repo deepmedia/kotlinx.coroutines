@@ -29,6 +29,11 @@ kotlin {
         addTarget(presets.watchosSimulatorArm64)
         addTarget(presets.tvosSimulatorArm64)
         addTarget(presets.macosArm64)
+
+        addTarget(presets.androidNativeArm32)
+        addTarget(presets.androidNativeArm64)
+        addTarget(presets.androidNativeX64)
+        addTarget(presets.androidNativeX86)
     }
 
     sourceSets {
