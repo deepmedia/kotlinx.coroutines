@@ -43,6 +43,15 @@ buildscript {
     }
 
     repositories {
+        maven {
+            name = "github"
+            url "https://maven.pkg.github.com/deepmedia/deepmedia-kotlinx"
+            credentials {
+                username = project.findProperty("github.user")
+                password = project.findProperty("github.pat")
+            }
+        }
+
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev" }
@@ -363,3 +372,6 @@ allprojects { subProject ->
                 }
             }
 }
+
+// https://youtrack.jetbrains.com/issue/KT-49109
+extensions.getByType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension.class).nodeVersion = "16.0.0"

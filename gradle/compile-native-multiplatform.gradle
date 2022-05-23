@@ -13,7 +13,7 @@ kotlin {
     }
 
     targets {
-        addTarget(presets.linuxX64)
+        /*addTarget(presets.linuxX64)
         addTarget(presets.iosArm64)
         addTarget(presets.iosArm32)
         addTarget(presets.iosX64)
@@ -28,7 +28,7 @@ kotlin {
         addTarget(presets.iosSimulatorArm64)
         addTarget(presets.watchosSimulatorArm64)
         addTarget(presets.tvosSimulatorArm64)
-        addTarget(presets.macosArm64)
+        addTarget(presets.macosArm64)*/
 
         addTarget(presets.androidNativeArm32)
         addTarget(presets.androidNativeArm64)
